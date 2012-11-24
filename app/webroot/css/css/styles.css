@@ -1,0 +1,60 @@
+.header { 
+	width:100%;
+	height:120px; 
+}
+
+.header h1 { 
+	font-family: 'Open Sans Condensed', sans-serif; font-size:86px;
+	text-align:center;
+	line-height:120px; 
+	font-weight:bold;
+	color: rgba(0,0,0,0.6);
+	text-shadow: 2px 5px 6px rgba(0,0,0,0.2),
+                 0px -5px 1px rgba(255,255,255,0.3);
+}
+
+h2 { font-family: 'Open Sans Condensed', sans-serif; font-size:22px; text-align:center; text-shadow: 1px 1px 2px #ccccc; }
+
+.definition { 
+	width:500px;
+	margin:0 auto;
+}
+
+blockquote { 
+	text-align:center;
+	font-family: Georgia, serif;
+	font-size: 18px;
+	font-style: italic;
+	width: 500px;
+	margin: 0.25em 0;
+	padding: 0.25em 20px;
+	line-height: 1.45;
+	position: relative;
+	color: #383838;
+	border: 0 none;
+}
+
+blockquote:before {
+	display: block;
+	content: "\201C" !important;
+	font-size: 80px;
+	position: absolute;
+	left: -20px;
+	top: -20px;
+	color: #7a7a7a;
+}
+	
+blockquote cite {
+	color: #999999;
+	font-size: 14px;
+	display: block;
+	margin-top: 5px;
+}
+ 
+blockquote cite:before {
+	content: "\2014 \2009";
+}
+
+.content {
+	margin:30px 0;
+}
