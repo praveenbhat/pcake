@@ -16,20 +16,22 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
-$pcakeDescription = __d('cake_dev', 'I am a Byte Chef -  Mixing up a dish of HTML, CSS, Jquery, PHP with colors.');
+$pDescription = __d('cake_dev', 'I am a Byte Chef -  Mixing up a dish of HTML, CSS, Jquery, PHP with colors.');
+$paboutme = __d('cake_dev', 'Hello, I am Praveen');
+$pdefinition = __d('cake_dev', 'I am a Byte Chef. <a href="http://en.wikipedia.org/wiki/Byte" target="_blank">Byte</a> <a href="http://en.wikipedia.org/wiki/Chef" target="_blank">Chef</a> - is who cooks Amazing Bytes.');
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
-		<?php echo $cakeDescription ?>:
+		<?php echo $pDescription ?>:
 	</title>
 	<?php
 		echo $this->Html->meta('icon');
 		echo $this->Html->css('css/bootstrap_min');
 		echo $this->Html->css('css/styles');
-		
+		echo $this->Html->css('http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -37,25 +39,22 @@ $pcakeDescription = __d('cake_dev', 'I am a Byte Chef -  Mixing up a dish of HTM
 	?>
 </head>
 <body>
-	<div id="container">
-		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
+	<div class="container">
+		<div class="header">
+			<h1><?php echo $paboutme; ?></h1>
 		</div>
-		<div id="content">
+		<div class="definition">
+			<blockquote><?php echo $pdefinition; ?></blockquote>
+		</div>
+		<div class="content">
 
 			<?php echo $this->Session->flash(); ?>
 
 			<?php echo $this->fetch('content'); ?>
 		</div>
 		<div id="footer">
-			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false)
-				);
-			?>
+			
 		</div>
 	</div>
-	<?php echo $this->element('sql_dump'); ?>
 </body>
 </html>
